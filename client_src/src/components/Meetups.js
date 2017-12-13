@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import meetupItem from './MeetupItem';
+import MeetupItem from './MeetupItem';
 
 class Meetups extends Component {
     constructor(){
@@ -21,12 +21,13 @@ class Meetups extends Component {
                 //console.log(this.state);
             })
         })
+        .catch(err => console.log(err))
     }
 
     render(){
         const meetupItems = this.state.meetups.map((meetup, i) => {
             return(
-                <meetupItem key={meetup.id} item={meetup}/>
+                <MeetupItem key={meetup.id} item={meetup}/>
             )
         })
 

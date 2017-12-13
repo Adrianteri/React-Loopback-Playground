@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class MeetupItem extends Component{
     constructor(props){
-        super();
+        super(props);
         this.state = {
             item : props.item
         }
